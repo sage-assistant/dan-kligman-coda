@@ -127,6 +127,11 @@ footer p{font-size:12px;color:#333;font-family:'Space Mono',monospace;letter-spa
 .konami-overlay p{color:#888;font-size:16px;max-width:500px;line-height:1.6}
 .konami-close{margin-top:30px;color:#444;font-size:12px;cursor:pointer;font-family:'Space Mono',monospace;letter-spacing:2px}
 
+/* IMAGES */
+.hero-img{width:100%;max-width:700px;border-radius:12px;margin:30px auto;display:block;border:1px solid #222;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.section-img{width:100%;border-radius:10px;margin:30px 0;border:1px solid #1a1a1a;box-shadow:0 10px 40px rgba(0,0,0,.4)}
+.img-caption{text-align:center;font-family:'Space Mono',monospace;font-size:11px;color:#444;letter-spacing:2px;text-transform:uppercase;margin-top:8px;margin-bottom:30px}
+
 /* RESPONSIVE */
 @media(max-width:600px){
 section{padding:60px 16px}
@@ -143,7 +148,7 @@ section{padding:60px 16px}
 <div id="splash" onclick="enterSite()">
 <div class="splash-badge">Priority Notice</div>
 <div class="splash-title">This website was built<br>specifically for<br><span style="color:var(--red)">Daniel Kligman</span></div>
-<div class="splash-sub">Re: Saturday Night, March 29, 2026</div>
+<div class="splash-sub">Re: Saturday Night, March 29, 2026 — Toronto</div>
 <button class="splash-enter">Open the Case File</button>
 <div class="splash-classified">Prepared by: The Bureau of Going Out</div>
 </div>
@@ -157,9 +162,10 @@ section{padding:60px 16px}
 <main id="main">
 
 <div class="header">
+<img src="case-file-hero.jpg" alt="Case File" class="hero-img" style="max-width:500px;margin-bottom:40px">
 <div class="header-alert">Formal Intervention</div>
 <h1>Daniel Kligman Is Needed at Coda Tonight</h1>
-<p class="subtitle">An official request from the Bureau of Going Out, filed on behalf of Adam, Rivets, Libby, and Libby's Buddy. This is not a drill.</p>
+<p class="subtitle">An official request from the Bureau of Going Out, filed on behalf of Adam Rivietz, Libby, and Libby's Buddy. This is not a drill.</p>
 <div class="scroll-hint">Scroll to review evidence</div>
 </div>
 
@@ -179,9 +185,9 @@ section{padding:60px 16px}
 <div class="value">Right now, probably in bed, "winding down"</div>
 </div>
 <div class="evidence-card">
-<div class="num">4</div>
+<div class="num">3</div>
 <div class="label">People Waiting on You</div>
-<div class="value">Adam, Rivets, Libby, and Libby's Buddy</div>
+<div class="value">Adam Rivietz, Libby, and Libby's Buddy</div>
 </div>
 <div class="evidence-card">
 <div class="num">0</div>
@@ -217,6 +223,7 @@ section{padding:60px 16px}
 <div class="section-label">Risk Assessment</div>
 <div class="section-title">FOMO Threat Level</div>
 <p class="section-text" style="text-align:center;max-width:600px;margin:0 auto 30px">Our analysts have calculated the precise level of regret Dan will experience tomorrow morning if he doesn't show up tonight.</p>
+<img src="threat-level.jpg" alt="Threat Level" class="section-img" style="max-width:500px;margin:20px auto;display:block">
 <div class="threat-bar-outer">
 <div class="threat-bar-inner" id="threatBar"></div>
 </div>
@@ -252,15 +259,9 @@ section{padding:60px 16px}
 
 <div class="crew-grid">
 <div class="crew-card">
-<div class="emoji">&#x1F3B6;</div>
-<div class="name">Adam</div>
-<div class="role">Core Member</div>
-<div class="status">CONFIRMED</div>
-</div>
-<div class="crew-card">
 <div class="emoji">&#x1F525;</div>
-<div class="name">Rivets</div>
-<div class="role">Energy Department</div>
+<div class="name">Adam Rivietz</div>
+<div class="role">Chief Vibes Officer</div>
 <div class="status">CONFIRMED</div>
 </div>
 <div class="crew-card">
@@ -292,7 +293,7 @@ section{padding:60px 16px}
 <h3>Official Petition</h3>
 <p>We, the undersigned, formally request Daniel Kligman's presence at Coda tonight.</p>
 <button class="sign-btn" id="signBtn" onclick="signPetition()">Sign the Petition</button>
-<div class="signature-count" id="sigCount">7 signatures so far</div>
+<div class="signature-count" id="sigCount">6 signatures so far</div>
 <div class="signatures-list" id="sigList"></div>
 </div>
 </div>
@@ -303,6 +304,8 @@ section{padding:60px 16px}
 <div class="reveal">
 <div class="section-label">Exhibit B</div>
 <div class="section-title">Two Possible Futures</div>
+<img src="two-timelines.jpg" alt="Two Timelines" class="section-img">
+<div class="img-caption">Artist's rendering of tonight's divergent realities</div>
 <div class="evidence-grid">
 <div class="evidence-card" style="border-color:var(--red)">
 <div class="label" style="color:var(--red)">Timeline A: Dan Stays Home</div>
@@ -325,6 +328,7 @@ Walks into Coda. Deep house hits different tonight. The crew goes wild. Stories 
 <div class="reveal">
 <div class="section-label">Final Notice</div>
 <h2>Coda.<br>Tonight.<br>Be There.</h2>
+<img src="coda-entrance.jpg" alt="Coda Tonight" class="section-img" style="max-width:600px;margin:20px auto;display:block;border-radius:12px">
 <div class="address">794 Bathurst St, Toronto</div>
 <p class="tagline">The squad is waiting. The bass is thumping. The only thing missing is Yorkville's finest closer.</p>
 <a href="https://maps.google.com/?q=Coda+Toronto+794+Bathurst+St" target="_blank" class="coda-btn">Get Directions to Coda</a>
@@ -370,7 +374,7 @@ startCountdown();
 const tickerMsgs=[
 "BREAKING: DAN KLIGMAN STILL NOT AT CODA — FRIENDS CONCERNED",
 "YORKVILLE TEAM CO-FOUNDER MISSING FROM SATURDAY NIGHT LINEUP",
-"SOURCES CONFIRM: ADAM, RIVETS, LIBBY + FRIEND EN ROUTE — DAN STATUS UNKNOWN",
+"SOURCES CONFIRM: ADAM RIVIETZ, LIBBY + FRIEND EN ROUTE — DAN STATUS UNKNOWN",
 "CODA TORONTO: 4AM LAST CALL ALL WEEKEND — WINDOW CLOSING",
 "QUEEN'S ALUMNI NETWORK REPORTS: DAN HAS NO VALID EXCUSE",
 "FOREST HILL'S TOP CLOSER CAN'T CLOSE ON A NIGHT OUT?",
@@ -384,7 +388,7 @@ const excuseResponses=[
 "REJECTED. A man who closes million-dollar deals can't close on a night out?",
 "INVALID. Queen's didn't raise a quitter, Dan.",
 "OVERRULED. Libby's buddy didn't come all this way for you to bail.",
-"DECLINED. Adam literally built a website. A WEBSITE. Show up.",
+"DECLINED. Your friends literally built a website. A WEBSITE. Show up.",
 "INSUFFICIENT. The Yorkville Team would never accept this from a client.",
 "DENIED. You've talked people into buying condos they can't afford. You can talk yourself into a cab.",
 "REJECTED. Even Lirad would tell you to go.",
@@ -436,11 +440,10 @@ setInterval(update,1000);
 }
 
 // PETITION
-let sigCount=7;
+let sigCount=6;
 const fakeSigs=[
 {name:"Aaron L.",time:"2 min ago"},
-{name:"Adam R.",time:"5 min ago"},
-{name:"Rivets",time:"5 min ago"},
+{name:"Adam Rivietz",time:"5 min ago"},
 {name:"Libby",time:"8 min ago"},
 {name:"Libby's Buddy",time:"8 min ago"},
 {name:"The DJ at Coda",time:"12 min ago"},
@@ -457,13 +460,13 @@ const extras=[
 {name:"The Bartender at Coda",time:"Waiting"},
 {name:"Saturday Night Itself",time:"Disappointed"},
 ];
-const sig=extras[Math.min(sigCount-8,extras.length-1)]||{name:"Another Concerned Citizen",time:"Just now"};
+const sig=extras[Math.min(sigCount-7,extras.length-1)]||{name:"Another Concerned Citizen",time:"Just now"};
 const div=document.createElement('div');
 div.className='sig-item';
 div.innerHTML='<span class="sig-name">'+sig.name+'</span><span class="sig-time">'+sig.time+'</span>';
 list.prepend(div);
 setTimeout(()=>div.classList.add('show'),50);
-if(sigCount>=12){
+if(sigCount>=11){
 document.getElementById('signBtn').textContent='DAN GET IN THE UBER';
 document.getElementById('signBtn').style.background='var(--red)';
 document.getElementById('signBtn').style.borderColor='var(--red)';
